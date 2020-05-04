@@ -7,10 +7,12 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
+    
   },
   bullet: {
     display: 'inline-block',
@@ -21,7 +23,8 @@ const useStyles = makeStyles({
     fontSize: 14,
   },
   pos: {
-    marginBottom: 12,
+    marginBottom: 30,
+    
   },
 });
 
@@ -30,6 +33,8 @@ export default function Character(props) {
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
+    <Grid container spacing={3}>
+    <Grid item xs={3}>
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
@@ -51,5 +56,7 @@ export default function Character(props) {
         <Button size="small" href={props.url} target="_blank">Click For API Link</Button>
       </CardActions>
     </Card>
+    </Grid>
+    </Grid>
   );
 }

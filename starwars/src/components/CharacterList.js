@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
+
 import Character from './Character'
+
+
+
+
 
 export default function CharacterList(){
 
@@ -28,10 +34,11 @@ export default function CharacterList(){
     console.log("charList items", charList)
 
     return(
-        <div style={{width: "20%"}}>
+        <div>
            {charData.map(x =>{
                
                return(
+                   
                    <Character {...x} />
                    
                )
