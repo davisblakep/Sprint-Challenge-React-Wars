@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Character() {
+export default function Character(props) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
@@ -33,22 +33,22 @@ export default function Character() {
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
+          Star Wars
         </Typography>
         <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
+          {props.name}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          adjective
+          Born: {props.birth_year}
         </Typography>
         <Typography variant="body2" component="p">
-          well meaning and kindly.
+          Height: {props.height}
           <br />
-          {'"a benevolent smile"'}
+          Mass: {props.mass}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button size="small" href={props.url} target="_blank">Click For API Link</Button>
       </CardActions>
     </Card>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Character from "./components/Character"
+import CharacterList from "./components/CharacterList"
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -15,7 +15,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <div>
-        <Character />
+        <CharacterList />
       </div>
     </div>
   );
