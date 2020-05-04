@@ -9,17 +9,17 @@ import Character from './Character'
 
 
 
-export default function CharacterList(){
+export default function CharacterList(props){
 
     const [charData, setCharData] = useState([]);
-    const [page, setPage] = useState(1)
+    // const [page, setPage] = useState(1)
 
     const charList = [];
 
     console.log("Character Data state", charData)
     
     useEffect(() =>{
-        axios.get(`https://swapi.py4e.com/api/people/?page=${page}`)
+        axios.get(`https://swapi.py4e.com/api/people/?page=${props.page}`)
         .then(response =>{
             setCharData(response.data.results)
             // if(page < 9){setPage(page +1)}
@@ -28,7 +28,7 @@ export default function CharacterList(){
         .catch(err =>{
             console.log(err)
         })
-    }, [page])
+    }, [props.page])
 
     charList.push(charData);
     console.log("charList items", charList)
