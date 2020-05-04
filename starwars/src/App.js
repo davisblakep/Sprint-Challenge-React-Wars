@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 
-
 import CharacterList from "./components/CharacterList"
 import Buttons from "./components/Buttons"
 
@@ -21,8 +20,6 @@ const App = () => {
     else {setPage(page * 0 + 9)}
   }
 
-  
-
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
@@ -34,9 +31,7 @@ const App = () => {
       <Buttons pageUp={pageUp} pageDown={pageDown}  />
       </div>
       <div style={{margin: '2%'}} >
-     
         <CharacterList page={page} />
-       
       </div>
       <div style={{margin: '2%'}}>
       <Buttons pageUp={pageUp} pageDown={pageDown}  />

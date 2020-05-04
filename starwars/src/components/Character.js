@@ -34,9 +34,6 @@ export default function Character(props) {
 
 
   return (
-//     <Grid container spacing={2}  justify="center">
-//     <Grid container
-//   direction="row"  item xs={3}>
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
@@ -66,7 +63,5 @@ export default function Character(props) {
         <Button size="small" href={props.url} target="_blank">API</Button>
       </CardActions>
     </Card>
-    // </Grid>
-    // </Grid>
   );
 }
