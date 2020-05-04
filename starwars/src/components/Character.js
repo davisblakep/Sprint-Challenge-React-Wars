@@ -30,11 +30,12 @@ const useStyles = makeStyles({
 
 export default function Character(props) {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
+
 
   return (
-    <Grid container spacing={3}>
-    <Grid item xs={3}>
+//     <Grid container spacing={2}  justify="center">
+//     <Grid container
+//   direction="row"  item xs={3}>
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
@@ -44,19 +45,27 @@ export default function Character(props) {
           {props.name}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          Born: {props.birth_year}
+          Films: {props.films.length}
         </Typography>
         <Typography variant="body2" component="p">
           Height: {props.height}
           <br />
           Mass: {props.mass}
+          <br />
+          Eye Color: {props.eye_color}
+          <br />
+          Hair Color: {props.hair_color}
+          <br />
+          Gender: {props.gender}
+          <br />
+          Born: {props.birth_year}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" href={props.url} target="_blank">Click For API Link</Button>
+        <Button size="small" href={props.url} target="_blank">API</Button>
       </CardActions>
     </Card>
-    </Grid>
-    </Grid>
+    // </Grid>
+    // </Grid>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Grid from '@material-ui/core/Grid';
 
 
 
@@ -35,14 +36,22 @@ export default function CharacterList(props){
 
     return(
         <div>
+            <Grid
+                container
+                direction="row"
+                justify="space-around"
+                alignItems="center"
+                container spacing={2}
+              >
            {charData.map(x =>{
                
                return(
-                   
+                <Grid item xs>
                    <Character {...x} />
-                   
+                   </Grid>
                )
            })}
+           </Grid>
         </div>
     )
 } 
