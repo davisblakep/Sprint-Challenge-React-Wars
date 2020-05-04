@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
+
 import CharacterList from "./components/CharacterList"
 import Buttons from "./components/Buttons"
 
